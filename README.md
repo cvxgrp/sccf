@@ -1,6 +1,7 @@
 # sccf
 
 `sccf` is a CVXPY extension for (approximately) minimizing a sum of clipped convex functions.
+The algorithms used are described in [our paper](http://web.stanford.edu/~boyd/papers/min_sum_clipped_convex.html).
 
 ## Installation
 
@@ -56,7 +57,7 @@ Please make sure to update tests as appropriate.
 [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/)
 
 ## Citing
-If you use `sccf` in your research, please consider citing
+If you use `sccf` in your research, please consider citing [our paper](http://web.stanford.edu/~boyd/papers/min_sum_clipped_convex.html):
 ```
 @article{barratt2019minimizing,
     title={Minimizing a Sum of Clipped Convex Functions},
