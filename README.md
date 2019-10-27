@@ -40,7 +40,7 @@ prob.solve()
 ```
 
 ## Examples
-For the examples in the paper, and more, see the `examples` paper.
+For the examples in the paper, and more, see the `examples` folder.
 
 ## Run tests
 Run:
