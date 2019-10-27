@@ -54,3 +54,14 @@ Please make sure to update tests as appropriate.
 
 ## License
 [Apache 2.0](https://choosealicense.com/licenses/apache-2.0/)
+
+## Citing
+If you use `sccf` in your research, please consider citing
+```
+@article{barratt2019minimizing,
+    title={Minimizing a Sum of Clipped Convex Functions},
+    author={Barratt, Shane and Angeris, Guillermo and Boyd, Stephen},
+    journal={arXiv},
+    year={2019}
+}
+```
