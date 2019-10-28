@@ -189,7 +189,7 @@ class Problem:
         self.vars_ = list(set(self.vars_))
 
     def solve(self, method="alternating", *args, **kwargs):
-        """Approximately solve the problem using alternating, convex-concave, or L-BFGS.
+        """Approximately solve the problem using convex-concave or L-BFGS.
 
         Parameters
         ==========
@@ -270,7 +270,7 @@ class Problem:
 
             stopping_condition = np.linalg.norm(lam_next - lam, np.inf)
 
-            lam = lam_next
+            lam = lam_next.astype(np.double)
             L = self.objective.value
             Ls.append(L)
 
