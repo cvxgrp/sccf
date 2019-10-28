@@ -35,8 +35,8 @@ prob.solve()
 
 losses = np.array([l.value[0] * Xtr.shape[0] for l in logistic_losses])
 latexify(3.5)
-plt.hist(np.log10(losses), color='black', bins=50)
-plt.xlim(-6, 1)
+plt.xlim(-6, 1.5)
+plt.hist(np.log10(losses), range=(-6, 1.5), color='black', bins=50)
 plt.xlabel("log logistic loss")
 plt.ylabel("count")
 plt.savefig("figs/logreg_density.pdf")
@@ -51,6 +51,8 @@ alphas = np.logspace(-1,1,50)
 avg_time = 0.0
 iters = 0.0
 for iter, alpha in enumerate(alphas):
+    iter = 26
+    alpha = alphas[iter]
     np.random.seed(0)
     theta = cp.Variable(n)
     b = cp.Variable(1)
@@ -88,8 +90,8 @@ for iter, alpha in enumerate(alphas):
 
         losses = np.array([l.value[0] * Xtr.shape[0] for l in logistic_losses])
         latexify(3.5)
-        plt.hist(np.log10(losses), color='black', bins=50)
-        plt.xlim(-6, 1)
+        plt.xlim(-6, 1.5)
+        plt.hist(np.log10(losses), range=(-6, 1.5), color='black', bins=50)
         plt.xlabel("log logistic loss")
         plt.ylabel("count")
         plt.savefig("figs/clipped_density.pdf")
