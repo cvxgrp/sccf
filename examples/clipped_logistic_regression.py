@@ -51,7 +51,6 @@ alphas = np.logspace(-1,1,50)
 avg_time = 0.0
 iters = 0.0
 for iter, alpha in enumerate(alphas):
-    iter = 26
     alpha = alphas[iter]
     np.random.seed(0)
     theta = cp.Variable(n)
@@ -66,6 +65,7 @@ for iter, alpha in enumerate(alphas):
     prob = sccf.Problem(objective)
     tic = time.time()
     result = prob.solve(step_size=.2, maxiter=50)
+    print (result["final_objective_value"])
     toc = time.time()
     avg_time += (toc - tic) / 50
     iters += result["iters"] / 50
