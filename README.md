@@ -66,3 +66,6 @@ If you use `sccf` in your research, please consider citing [our paper](http://we
     year={2019}
 }
 ```
+
+## Notes
+A specialized verison of `sccf` for robust regression was implemented in the [LinRegOutliers](https://github.com/jbytecode/LinRegOutliers) Julia package.
